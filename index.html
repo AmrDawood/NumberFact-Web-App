@@ -12,7 +12,12 @@
         <div class="row mt-5 p-5">
             <div class="col-md-6 m-auto text-white-50">
                 <h1 class="text-center">Numbers Fact</h1>
-                <input id="inputNumber" type="number" class="form-control" placeholder="Enter your number">
+                <div id="btngroup" class="text-center text-capitalize my-2"  >
+                    <button type="button" class="btn btn-secondary" value="math">math</button>
+                    <button type="button" class="btn btn-secondary" value="">trivia</button>
+                    <button type="button" class="btn btn-secondary" value="year">year</button>
+                  </div>
+                <input id="inputNumber" type="number" class="form-control d-none" placeholder="Enter your number">
                 <div class="mt-2 p-2">
                     <h4>Fact :</h4>
                     <p id="outputFact" class="lead"></p>

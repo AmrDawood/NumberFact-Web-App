@@ -17,6 +17,8 @@ function showInput(e){
     targetNumberType =e.target.value;
     inputNumber.style.cssText="display:block !important;";
     inputNumber.value="";
+    inputNumber.focus();
+    outputFact.textContent = "";
     inputNumber.placeholder = `please enter your ${e.target.textContent} number`;
     inputNumber.addEventListener("input",getnumberFact);
 }

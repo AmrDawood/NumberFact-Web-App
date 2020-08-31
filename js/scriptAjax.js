@@ -1,8 +1,5 @@
 const inputNumber = document.getElementById("inputNumber");
 const outputFact =document.querySelector("div p");
-const btnYear=document.querySelector('#btngroup button:nth-child(3)');
-const btnTrivia=document.querySelector('#btngroup button:nth-child(2)');
-const btnMath=document.querySelector('#btngroup button:nth-child(1)');
 const btnGroup =document.querySelectorAll('#btngroup button');
 
 let targetNumberType;
@@ -11,6 +8,7 @@ let inputNumberValue;
 btnGroup.forEach(btn => {
     btn.addEventListener('click',showInput);
  });
+ inputNumber.addEventListener("input",getnumberFact);
 
 
 function showInput(e){
@@ -20,7 +18,6 @@ function showInput(e){
     inputNumber.focus();
     outputFact.textContent = "";
     inputNumber.placeholder = `please enter your ${e.target.textContent} number`;
-    inputNumber.addEventListener("input",getnumberFact);
 }
 
 function getnumberFact(){

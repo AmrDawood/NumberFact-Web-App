@@ -12,12 +12,31 @@
         <div class="row mt-5 p-5">
             <div class="col-md-6 m-auto text-white-50">
                 <h1 class="text-center">Numbers Fact</h1>
-                <div id="btngroup" class="text-center text-capitalize my-2"  >
-                    <button type="button" class="btn btn-secondary" value="math">math</button>
-                    <button type="button" class="btn btn-secondary" value="">trivia</button>
-                    <button type="button" class="btn btn-secondary" value="year">year</button>
-                  </div>
-                <input id="inputNumber" type="number" class="form-control d-none" placeholder="Enter your number">
+                <div class="container ">
+                    <div class="row d-flex justify-content-center">
+                        <div id="btngroup" class=" my-2 "  >
+                            <button type="button" class="btn btn-secondary" value="math">math</button>
+                            <button type="button" class="btn btn-secondary" value="">trivia</button>
+                            <button type="button" class="btn btn-secondary" value="year">year</button>
+                          </div>
+                          <div class="my-2 pl-1">
+                            <button id="dateBtn" type="button" class="btn btn-secondary" value="date">date</button>
+                          </div>
+                    </div>
+                </div>
+                <form class="pt-2">
+                    <div class="form-row">
+                      <div class="col">
+                        <input id="inputDay" min="1" max="31" type="number" class="form-control d-none " placeholder="Enter your day">
+                      </div>
+                      <div class="col">
+                        <input id="inputMonth" min="1" max="12" type="number" class="form-control d-none" placeholder="Enter your month">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                        <input id="inputNumber" type="number" class="form-control d-none" placeholder="Enter your number">
+                      </div>
+                  </form>              
                 <div class="mt-2 p-2">
                     <h4>Fact :</h4>
                     <p id="outputFact" class="lead"></p>

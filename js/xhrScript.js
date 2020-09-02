@@ -15,25 +15,18 @@ btnGroup.forEach(btn => {
  });
 inputNumber.addEventListener("input",getnumberFact);
 dateBtn.addEventListener('click' ,showDateInput);
-
 inputMonth.addEventListener("input",getDateFact);
 inputDay.addEventListener("input",getDateFact);
-
 
 function showInput(e){
     targetNumberType =e.target.value;
     inputNumber.style.cssText="display:block !important;";
     inputMonth.style.cssText="display:none !important;";
     inputDay.style.cssText="display:none !important;";
-    inputNumber.value="";
-    inputDay.value="";
-    inputMonth.value="";
+    clearInputsOutput();
     inputNumber.focus();
-    outputFact.textContent = "";
     inputNumber.placeholder = `please enter your ${e.target.textContent} number`;
 }
-
-
 
 function getnumberFact(){
     let httpReq =new XMLHttpRequest();
@@ -54,9 +47,8 @@ function showDateInput(e){
     inputMonth.style.cssText="display:block !important;";
     inputDay.style.cssText="display:block !important;";
     inputNumber.style.cssText="display:none !important;";
-    inputNumber.value="";
-    inputDay.focus();
-    outputFact.textContent = "";
+    clearInputsOutput();
+    inputDay.focus();  
 }
 
 function getDateFact(){
@@ -72,4 +64,11 @@ function getDateFact(){
             outputFact.textContent = "";
         }
     });
+}
+
+function clearInputsOutput(){
+    inputNumber.value="";
+    inputDay.value="";
+    inputMonth.value="";
+    outputFact.textContent = "";
 }

@@ -54,7 +54,7 @@ function showDateInput(e){
 function getDateFact(){
     inputDayValue = inputDay.value ;
     inpuyMonthValue = inputMonth.value;
-    fetch(`http://numbersapi.com/${inpuyMonthValue}/${inputDayValue}/${targetNumberType}`)
+    fetch(`https://cors-anywhere.herokuapp.com/http://numbersapi.com/${inpuyMonthValue}/${inputDayValue}/${targetNumberType}`)
     .then((response)=>{
         response.text()
         .then((text)=>{
